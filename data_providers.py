@@ -240,7 +240,7 @@ class FruitsDataProvider(DataProvider):
 
         inputs = inputs.astype(np.float32)
         if flatten:
-            inputs = np.reshape(inputs, newshape=(-1, 100*100)) # as our pics are 100dim
+            inputs = np.reshape(inputs, newshape=(-1, 100*100*3)) # as our pics are 100dim
         #else:
         #    inputs = np.expand_dims(inputs, axis=3)
         inputs = inputs / 255.0
